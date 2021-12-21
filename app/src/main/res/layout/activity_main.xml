@@ -1,61 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#C3000000"
+    android:background="@color/purple_200"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/image"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="CALCULATOR FOR EMI"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scrollbarSize="20sp"
+
+
+                android:text="Amount :"
+                android:textColor="#FFFCFC"
+                android:textColorHint="#C3BD90"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="Enter the Amount"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="#D5C436"
+                android:textSize="18sp">
+
+
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scrollbarSize="20sp"
+
+
+                android:text="Interest :"
+                android:textColor="#FFFCFC"
+                android:textColorHint="#C3BD90"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/Rate"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="Enter the Rate"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="#D5C436"
+                android:textSize="18sp">
+
+
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/image"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="365dp" />
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:scrollbarSize="20sp"
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="303dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Enter the amount"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="234dp" />
+            android:text="Month :"
+            android:textColor="#FFFCFC"
+            android:textColorHint="#C3BD90"
+            android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="455dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/year"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Enter the Month"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColorHint="#D5C436"
+            android:textSize="18sp">
+
+
+        </EditText>
+    </LinearLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_height="3dp" />
+
+        <TextView
+            android:id="@+id/emi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+
+            android:ems="10"
+            android:padding="10dp"
+
+            android:text="Emi :"
+            android:textColor="#FFFCFC"
+            android:textColorHint="#D5C436"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+
+            android:ems="10"
+            android:padding="10dp"
+
+            android:text="Total amount:"
+            android:textColor="#FFFCFC"
+            android:textColorHint="#D5C436"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Button" />
+    </LinearLayout>
+</RelativeLayout>
