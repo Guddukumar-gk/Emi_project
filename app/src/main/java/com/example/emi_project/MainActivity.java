@@ -24,8 +24,26 @@ public class MainActivity extends AppCompatActivity {
         final EditText r = (EditText) findViewById(R.id.Rate);
         final EditText t = (EditText) findViewById(R.id.year);
         final Button btr = (Button) findViewById(R.id.button);
+        final Button clear = (Button) findViewById(R.id.clear);
         final TextView emi = (TextView) findViewById(R.id.emi);
         final TextView total = (TextView) findViewById(R.id.total_amount);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(p.getText().toString().length()<10)     //size as per your requirement
+                {
+                   p.requestFocus();
+                    r.setText("");
+                    t.setText("");
+                    p.setText("");
+                    total.setText("");
+                    emi.setText("");
+                }
+            }
+        });
+
+
 
         btr.setOnClickListener(new View.OnClickListener() {
             @Override
