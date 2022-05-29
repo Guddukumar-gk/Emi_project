@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundcolor"
     tools:context=".MainActivity">
 
 
@@ -11,19 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:text="Gk Developer"
             android:padding="5dp"
-            android:background="@drawable/gradient"
+            android:text="Gk Developer"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold|italic" />
 
@@ -50,6 +52,7 @@
                 android:padding="5dp"
                 android:scrollbarSize="20sp"
                 android:text="Amount :"
+                android:textColor="@color/white"
                 android:textColorHint="#C3BD90"
                 android:textSize="18sp" />
 
@@ -82,6 +85,7 @@
                 android:padding="5dp"
                 android:scrollbarSize="20sp"
                 android:text="Interest :"
+                android:textColor="@color/white"
                 android:textColorHint="#C3BD90"
                 android:textSize="18sp" />
 
@@ -114,6 +118,7 @@
                 android:padding="5dp"
                 android:scrollbarSize="20sp"
                 android:text="Month :"
+                android:textColor="@color/white"
                 android:textColorHint="#C3BD90"
                 android:textSize="18sp" />
 
@@ -188,21 +193,21 @@
                 android:id="@+id/clear"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
-                android:padding="5dp"
-                android:textColor="@color/white"
                 android:layout_marginRight="10dp"
-                android:text="Clear" />
+                android:background="@drawable/bg"
+                android:padding="5dp"
+                android:text="Clear"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="150dp"
-                android:textColor="@color/white"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
-
+                android:background="@drawable/bg"
                 android:padding="5dp"
-
-                android:text="calculate" />
+                android:text="calculate"
+                android:textColor="@color/white" />
         </LinearLayout>
 
     </LinearLayout>
